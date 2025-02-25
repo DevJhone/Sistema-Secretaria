@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"; // Importando a Navbar
 import axios from "axios";
 import { Bar, Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
-import "../styles/dashboard.css";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
     const [estatisticasProdutores, setEstatisticasProdutores] = useState({});
