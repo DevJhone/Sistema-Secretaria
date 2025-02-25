@@ -1,0 +1,148 @@
+/* 🔹 Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Fundo com Imagem Responsiva */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/assets/african-man-harvesting-vegetables.jpg') center/cover no-repeat;
+  position: fixed; /* 🔥 Mantém a tela fixa */
+  top: 0;
+  left: 0;
+  
+}
+
+/* 🔹 Sobreposição para Melhorar Contraste */
+.login-page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 🔥 Ajustado para melhor visibilidade */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 🔹 Ajuste para Garantir que o Corpo Não Role */
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+/* 🔹 Container do Login */
+.login-container {
+  max-width: 450px;
+  width: 90%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔹 Animação de Entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* 🔹 Título do Login */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ffff;
+}
+
+/* 🔹 Inputs */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Efeito ao Focar no Input */
+.login-container input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🔹 Botão de Login com Efeito Neon */
+.login-container button {
+  width: 60%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00b300, #006600);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin: 15px auto 0 auto;
+}
+
+/* 🔹 Efeito Hover do Botão */
+.login-container button:hover {
+  background: linear-gradient(135deg, #009933, #004d00);
+  box-shadow: 0px 0px 14px rgba(0, 255, 0, 0.5);
+}
+
+/* 🔹 Mensagem de Erro */
+.mensagem-erro {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .login-container h2 {
+    font-size: 22px;
+  }
+
+  .login-container button {
+    width: 80%;
+  }
+}

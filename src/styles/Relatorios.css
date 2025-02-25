@@ -1,0 +1,134 @@
+/* 🔹 Estilo Global da Página de Relatórios */
+.relatorios-container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Título */
+.relatorios-container h2 {
+    font-size: 24px;
+    color: #027A18;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 🔹 Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filtros select, .filtros input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #027A18;
+    background: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.filtros input[type="date"] {
+    cursor: pointer;
+}
+
+.filtros select:focus, .filtros input:focus {
+    border-color: #00b300;
+    box-shadow: 0px 0px 8px rgba(0, 179, 0, 0.4);
+    outline: none;
+}
+
+/* 🔹 Botão de Buscar */
+.filtros button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background: #027A18;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.filtros button:hover {
+    background: #00b300;
+    transform: scale(1.05);
+}
+
+/* 🔹 Tabela de Relatórios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table thead {
+    background: #027A18;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* 🔹 Botões de Exportação */
+.export-buttons {
+    margin-top: 20px;
+}
+
+.export-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #027A18;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.export-buttons button:hover {
+    background: #00b300;
+    transform: scale(1.05);
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filtros select, .filtros input, .filtros button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

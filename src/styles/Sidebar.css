@@ -1,0 +1,99 @@
+/* 🔹 Estilização da Sidebar */
+.sidebar {
+  width: 275px; /* Levemente mais compacta */
+  height: 100vh;
+  background: linear-gradient(135deg, #02991b, #027314);
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* 🔹 Título da Sidebar */
+.sidebar h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 🔹 Lista de Navegação */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 🔹 Itens da Sidebar */
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+/* 🔹 Links da Sidebar */
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Ícones */
+.sidebar ul li a svg {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Hover */
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* 🔹 Ativo */
+.sidebar ul li a.active {
+  background: #1e8449;
+  font-weight: bold;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px; /* Sidebar reduzida em telas menores */
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sidebar h2 {
+    display: none; /* Esconde o título */
+  }
+
+  .sidebar ul li a {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .sidebar ul li a svg {
+    margin-right: 0;
+  }
+
+  .sidebar ul li a span {
+    display: none; /* Oculta os textos, deixando apenas os ícones */
+  }
+}

@@ -1,0 +1,41 @@
+/* 🔹 Estrutura principal do app */
+.app-container {
+  display: grid;
+  grid-template-columns: 230px 1fr; /* Sidebar reduzida para 230px */
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Sidebar */
+
+
+
+/* 🔹 Conteúdo Principal */
+.content {
+  padding: 25px;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Scroll automático se o conteúdo for maior */
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 65px 1fr; /* Sidebar reduzida */
+  }
+
+  .sidebar {
+    width: 65px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}

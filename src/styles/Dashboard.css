@@ -1,0 +1,113 @@
+.dashboard {
+  margin-left: 290px;
+  padding: 20px;
+  text-align: center;
+  max-width: 1600px; /* Limita a largura para não ficar muito espalhado */
+  margin: 0 auto; /* Centraliza a dashboard */
+}
+
+.dashboard h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* 🔹 Cartões de Estatísticas */
+.card {
+  width: 180px;
+  background: linear-gradient(135deg, #02991b, #0cca2c); /* Gradiente sutil */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 🔹 Área dos Gráficos */
+.chart-container {
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* 📱 Melhorando a Responsividade */
+@media (max-width: 1024px) {
+  .dashboard {
+    margin-left: 0;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .dashboard-container {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .card {
+    width: 150px;
+    padding: 12px;
+  }
+
+  .card h2 {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+
+  .chart-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .chart-container {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,142 @@
+.lista-produtores {
+  margin-left: 260px; /* Ajuste para a Sidebar */
+  padding: 20px;
+  max-width: 1600px; /* 🔹 Agora um pouco mais largo */
+  margin: 0 auto; /* 🔹 Centraliza a lista */
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Container da tabela */
+.table-container {
+  overflow-x: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Estilização da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-size: 15px;
+}
+
+th {
+  background: #02991b;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background: rgba(0, 153, 27, 0.1);
+  cursor: pointer;
+}
+
+/* 🔹 Ajuste para os botões */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px; /* 🔹 Melhor espaçamento entre botões */
+  margin-top: 15px;
+}
+
+button {
+  background: #02991b;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #027916;
+  transform: scale(1.05);
+}
+
+/* 🔹 Botão de exportação */
+.export {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* 🔹 Ajuste de espaçamento */
+  margin-bottom: 15px;
+}
+
+.export button {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+/* 📌 Ajustando para Navbar e Sidebar */
+.content {
+  padding: 80px 20px 20px 280px; /* 🔹 Considerando a Navbar e Sidebar */
+  max-width: 1200px; /* 🔹 Largura máxima ajustada */
+  margin: 0 auto;
+}
+
+/* 📱 Melhorando a Responsividade */
+@media (max-width: 1024px) {
+  .lista-produtores {
+    margin-left: 0;
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .table-container {
+    padding: 15px;
+  }
+
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .export {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .lista-produtores {
+    padding: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .export {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

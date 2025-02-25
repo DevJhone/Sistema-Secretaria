@@ -1,0 +1,15 @@
+.servicos-container {
+    padding: 20px;
+}
+
+.servico-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.botao-acao {
+    margin-top: 10px;
+}

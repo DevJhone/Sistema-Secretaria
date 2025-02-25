@@ -1,0 +1,85 @@
+/* 🔹 Estilo Geral da Página */
+.cadastro-produtor {
+  margin-left: 270px;
+  padding: 30px;
+  max-width: 1600px; /* 🔥 Aumenta a largura do formulário */
+  margin: auto; /* 🔥 Centraliza na tela */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔹 Título */
+.cadastro-produtor h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #027A18;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Formulário */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* 🔹 Inputs e Selects */
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  background: #f9f9f9;
+}
+
+input:focus, select:focus {
+  border-color: #027A18;
+  box-shadow: 0px 0px 8px rgba(0, 179, 0, 0.4);
+  outline: none;
+}
+
+/* 🔹 Botão de Envio */
+button {
+  width: 100%;
+  background: #027A18;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #00b300;
+  transform: scale(1.05);
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 768px) {
+  .cadastro-produtor {
+    margin-left: 0;
+    width: 90%;
+    padding: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

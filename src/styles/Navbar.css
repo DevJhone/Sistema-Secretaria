@@ -1,0 +1,144 @@
+/* 🔹 Estilização da Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 274px;
+  right: 0;
+  height: 80px; /* Reduzindo a altura */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #02991b, #027314);
+  padding: 10px 25px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Nome do Sistema */
+.navbar h1 {
+  padding-top: 20px;
+  font-size: 1.5rem; /* Menor */
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar h1:hover {
+  color: #c3f3d4;
+}
+
+/* 🔹 Container do Usuário */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+/* 🔹 Saudação personalizada */
+.navbar-user span {
+  font-size: 1rem; /* Menor */
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-user span:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* 🔹 Estilização dos botões (Menores) */
+.navbar button {
+  background: white;
+  color: #027314;
+  border: 2px solid white;
+  padding: 6px 12px; /* Botões menores */
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar button:hover {
+  background: #1e8449;
+  color: white;
+  border-color: #1e8449;
+  transform: scale(1.05);
+}
+
+/* 🔹 Animação sutil */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 1024px) {
+  .navbar {
+    left: 0;
+    padding: 8px 20px;
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+
+  .navbar-user {
+    gap: 10px;
+  }
+
+  .navbar-user span {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .navbar button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-user {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar-user span {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  .navbar button {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}

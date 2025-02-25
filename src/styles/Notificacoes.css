@@ -1,0 +1,12 @@
+.notificacoes-container {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.notificacao-item {
+  background: #fef9c3;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
